@@ -1,0 +1,33 @@
+// para ver os bancos
+
+SHOW DATABASES;
+
+//para criar uma tabela
+CREATE DATABASE nome_banco;
+
+// para seleccionar a tabela
+USE nome_banco;
+
+// ver as tabelas que foi criadas 
+SHOW TABLES;
+
+// para ver os dados da tabela
+DESCRIBE nome_tabela;
+
+//SELECIONANDO TODOS OS USUARIOS
+SELECT * FROM usuarios;
+
+//SELECIONANDO USUARIO maior q
+SELECT * FROM usuarios WHERE idade > 18;
+
+//para selecionar a idade =
+SELECT * FROM usuarios WHERE idade =20;
+
+//selecionar pelo nome 
+SELECT * FROM usuarios WHERE nome = 'Rosi';
+
+//comando UPDATED
+UPDATED usuarios SET nome = 'Teste' WHERE nome = 'Rosi';
+
+// para deletar
+DELETE FROM usuarios WHERE nome = 'Rosi';

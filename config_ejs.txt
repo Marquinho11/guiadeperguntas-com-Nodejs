@@ -1,0 +1,38 @@
+  var nome = "Marco";
+    var lang = "Js";
+    var exibirMsg = false;
+    var produtos  = [
+        {'nome': 'Doritos',price: 8.90},
+        {'nome': 'Coca-Cola',price: 10.90},
+        {'nome': 'Fanta',price: 8.90},
+        {'nome': 'Fofura',price: 3.90},
+        {'nome': 'KitKat',price: 4.90},
+        {'nome': 'Snikers',price: 2.90}
+        
+    ];
+    res.render("index", {
+        nome: nome,
+        lang: lang,
+        msg: exibirMsg,
+        produtos: produtos,
+    });
+        
+ 
+ 
+ <p>Meu nome é: <%= nome %></p>
+    <p>Minha linguagem de programação é: <%= lang %></p>
+
+    <% if (msg == true) { %>
+        <h1 class="error-message">Erro no servidor</h1>
+    <% } else { %>
+        <h3 class="success-message">Nenhum erro</h3>
+    <% } %>
+
+    <div class="question-list">
+        <% produtos.forEach(function(product) { %>
+            <div class="product">
+                <h4><%= product.nome %></h4>
+                <p>Preço: <%= product.price %></p>
+            </div>
+        <% }) %>
+    </div>

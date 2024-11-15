@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Histórico</title>
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <h1>Histórico de Atividades</h1>
+        <a href="/perguntas" class="btn btn-primary" >Perguntar</a>
+    </header>
+    <main>
+        <section class="historico">
+            <h2>Atividades Recentes</h2>
+            <ul>
+                <%perguntas.forEach(pergunta =>{%>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Pergunta: <%=pergunta.title%>
+                                <p><%=pergunta.description%></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/perguntar/<%= pergunta.id %>"</a> <button class="btn btn-primary">Responder</button></a>
+                        </div>
+                    </div>
+                <%})%>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Meu Site</p>
+    </footer>
+</body>
+</html>
